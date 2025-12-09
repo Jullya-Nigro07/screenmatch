@@ -53,16 +53,13 @@ public class Main {
 
         System.out.println("\n----------------------------------------------------\n");
 
-        Episodio episodioBridgerton3 = new Episodio();
+        Episodio episodioBridgerton3 = new Episodio("A Arte de Desfalecer", 3, bridgerton2);
 
-        episodioBridgerton3.setNomeEpisodio("A Arte de Desfalecer");
-        episodioBridgerton3.setNumeroEpisodio(3);
-        episodioBridgerton3.setSerieEpisodio(bridgerton2);
+        System.out.println("O nome do episódio nº" + episodioBridgerton3.numeroEpisodio() +
+                " da Série " + episodioBridgerton3.serieEpisodio().getNome() +
+                " é: " + episodioBridgerton3.nomeEpisodio() +
+                "\nCom média duração de: " + bridgerton2.getMinutosPorEpisodio() + "(min) por episódio");
 
-
-        System.out.println("O nome do episódio nº" + episodioBridgerton3.getNumeroEpisodio() +
-                " da Serie " + episodioBridgerton3.getSerieEpisodio().getNome() +
-                " é: " + episodioBridgerton3.getNomeEpisodio());
 
 
         System.out.println("\n----------------------------------------------------\n");

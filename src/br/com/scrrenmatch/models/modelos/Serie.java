@@ -26,6 +26,10 @@ public class Serie extends Titulo implements Classificavel {
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
 
+    public int getMinutosPorEpisodio(){
+        return minutosPorEpisodio;
+    }
+
     public double getTotalVisuzalizacoes() {
         return totalVisuzalizacoes;
     }
