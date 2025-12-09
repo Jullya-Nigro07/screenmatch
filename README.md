@@ -6,7 +6,6 @@
 ![Linguagem](https://img.shields.io/badge/Linguagem-Java-red)
 ![IDE](https://img.shields.io/badge/IDE-IntelliJ%20IDEA-blue)
 
-Esse projeto está em andamento... pois é um script de estudo do curso Java na Alura, e precisa de melhorias.
 
 ---
 
