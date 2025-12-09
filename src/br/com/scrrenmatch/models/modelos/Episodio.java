@@ -1,35 +1,6 @@
 package br.com.scrrenmatch.models.modelos;
 
-public class Episodio {
-
-    private int numeroEpisodio;
-    private String nomeEpisodio;
-    private Serie serieEpisodio;
-
-    public int getNumeroEpisodio() {
-        return numeroEpisodio;
-    }
-
-    public String getNomeEpisodio() {
-        return nomeEpisodio;
-    }
-
-    public Serie getSerieEpisodio() {
-        return serieEpisodio;
-    }
-
-    public void setNumeroEpisodio(int numeroEpisodio) {
-        this.numeroEpisodio = numeroEpisodio;
-    }
-
-    public void setNomeEpisodio(String nomeEpisodio) {
-        this.nomeEpisodio = nomeEpisodio;
-    }
-
-    public void setSerieEpisodio(Serie serieEpisodio) {
-        this.serieEpisodio = serieEpisodio;
-    }
-
+public record Episodio(String nomeEpisodio, int numeroEpisodio, Serie serieEpisodio) {
 
     @Override
     public String toString () {
