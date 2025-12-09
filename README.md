@@ -2,7 +2,7 @@
 
 ---
 
-![Status](https://img.shields.io/badge/Status-Em%20andamento-yellow)
+![Status](https://img.shields.io/badge/Status-Concluído-green)
 ![Linguagem](https://img.shields.io/badge/Linguagem-Java-red)
 ![IDE](https://img.shields.io/badge/IDE-IntelliJ%20IDEA-blue)
 
