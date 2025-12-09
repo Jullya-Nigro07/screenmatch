@@ -6,71 +6,122 @@
 ![Linguagem](https://img.shields.io/badge/Linguagem-Java-red)
 ![IDE](https://img.shields.io/badge/IDE-IntelliJ%20IDEA-blue)
 
-Esse projeto está em andamento... pois é um script de estudo do curso Java na Alura.
+Esse projeto está em andamento... pois é um script de estudo do curso Java na Alura, e precisa de melhorias.
 
 ---
 
 ## ✨ Visão Geral do Projeto
 
-**Screenmatch** é um projeto de estudos em Java, focado em **Orientação a Objetos (POO)** e manipulação de coleções. Ele simula uma plataforma de streaming, modelando filmes e séries como objetos para praticar:
+**Screenmatch** é um projeto desenvolvido em Java para praticar **Orientação a Objetos (POO)**, cálculos simples, herança e polimorfismo.  
+Ele simula uma plataforma de streaming com filmes e séries, permitindo trabalhar com:
 
-* **Modelagem de Domínio:** Criação de classes e atributos para entidades (Filme, Série, Título)
-* **Cálculos e Lógica:** Soma de tempo de visualização e cálculo de médias de avaliação
-* **Manipulação de Coleções:** Ordenação, filtragem e iteração de listas de títulos
+- Classes e herança (`Filme`, `Serie`, `Titulo`)
+- Avaliações e cálculo de médias
+- Cálculo de duração total para maratonas
+- Recomendações automáticas com base em notas ou visualizações
+- Criação e exibição de episódios associados a uma série
 
-> 📝 **Nota:** Esta é uma aplicação de linha de comando (CLI), focada puramente na lógica de backend
+> 📝 **Nota:** Trata-se de uma aplicação simples em linha de comando, focada em lógica e estruturação de código.
 
 ---
 
 ## 🚀 Como Rodar o Projeto
 
-Siga estes passos simples para colocar o Screenmatch em funcionamento:
+1. **Clone o repositório:**
 
-1.  **Clone o repositório:**
-   
-    ```bash
-    git clone [https://github.com/Jullya-Nigro07/screenmatch.git](https://github.com/Jullya-Nigro07/screenmatch.git)
+   ```bash
+   git clone "https://github.com/Jullya-Nigro07/screenmatch.git"
     ```
-    
-2.  **Abra no IDE:** Use seu Ambiente de Desenvolvimento Integrado (IDE) Java favorito (IntelliJ IDEA, Eclipse, VS Code c/ extensão Java)
 
-3.  **Compile e Execute:**
-    * Compile o projeto.
-    * Execute a classe principal (`Main`, `Principal` ou similar) para interagir com as funcionalidades na linha de comando
-      
+2. Abra no IDE:
+    Abra o projeto no **IntelliJ IDEA** (ou qualquer IDE com suporte a Java).
+
+
+3. Compile e execute:
+Rode a classe principal **Main** para testar os cálculos, avaliações e recomendações.
+
+---
+
+### 📁 Estrutura do projeto
+
+
+        src/
+        └── br.com.screenmatch/
+                ├── calculos/     
+                │   ├── CalculadoraDeTempo.java
+                │   ├── Classificavel.java
+                │   └── FilmeRecomendacao.java
+                │
+                ├── modelos
+                │    ├── Titulo.java
+                │    ├── Filme.java
+                │    ├── Serie.java
+                │    └── Episodio.java
+                │
+                ├── principal/
+                     ├── Main.java
+
 ---
 
 ## ✅ Funcionalidades Principais
 
-* **Definição de Objetos:** Criação de instâncias de `Filme` e `Série` com atributos como Título, Duração, Ano de Lançamento e Classificação.
-  
-* **Gerenciamento de Coleções:**
-    * Adicionar novos títulos à lista.
-    * Ordenar a lista por diferentes critérios (nome, duração, ano).
-    * Iterar e exibir todos os títulos.
-    
-* **Métricas:**
-    * Cálculo do **tempo total necessário** para assistir a todos os títulos da lista.
-    * Média de avaliação de títulos.
+### 🎥 Filmes
+- Criar filmes com nome e ano
+- Definir duração
+- Avaliar várias vezes
+- Calcular média de avaliações
+- Classificação automática via interface **Classificavel**
+- Exibir ficha técnica
 
 ---
 
-## 🧑‍💻 Tecnologias e Conceitos
-
-Este projeto é um excelente ponto de partida para consolidar conhecimentos em:
-
-* **Java (Linguagem)**
-* **Orientação a Objetos (POO):** Encapsulamento, Herança, Polimorfismo
-* **Coleções Java:** Uso de `List`, interfaces `Comparable` e `Comparator` para ordenação
-* **Estrutura de Pacotes/Classes:** Organização de código em um projeto Java robusto
+### 📺 Séries
+- Criar séries com nome e ano
+- Definir temporadas, episódios e duração por episódio
+- Cálculo automático da duração total da série
+- Definir total de visualizações
+- Classificação automática baseada em visualizações
+- Exibir ficha e recomendação
 
 ---
 
-## 💡 Próximos Passos & Possíveis Melhorias
+### 🎞️ Episódios
 
-O projeto é aberto a melhorias! Algumas ideias para quem quiser evoluir este código:
+Criar episódios com:
 
-1.  **Integração com API Externa:** Conectar-se a APIs como OMDb para buscar dados de filmes automaticamente
-2.  **Nova Interface:** Transformar a aplicação CLI em uma **API REST** ou um **Front-end Web** para facilitar a visualização e interação
-3.  **Persistência de Dados:** Adicionar um banco de dados (SQL, NoSQL) ou salvar em arquivo (JSON) para manter as listas entre execuções
-4.  **Robustez:** Melhorar a validação de entrada e o tratamento de exceções
+- Número do episódio
+- Nome do episódio
+- Série associada
+- Exibir descrição completa do episódio.
+
+---
+
+### ⏱️ Calculadora de Maratona
+
+- Somar o tempo total de filmes e séries
+- Exibir a duração total acumulada
+
+---
+
+### ⭐ Sistema de Recomendação
+
+A classe **FilmeRecomendacao** retorna mensagens como:
+
+- "Não temos avaliações sufientes"
+- "Não é muito avaliado"
+- "Boa avaliação!"
+- "Muito bem avaliado!"
+- "Top 10 da plataforma!"
+
+Ou uma mensagem padrão "Nenhuma classificação" caso não se enquadre em nenhuma regra.
+
+---
+
+### 🧑‍💻 Tecnologias e Conceitos
+
+- Java
+- POO (Herança, Encapsulamento, Polimorfismo)
+- Interfaces
+- Organização do projeto em pacotes
+- Listas e iterações com `ArrayList`
+- Override de métodos (`toString)
