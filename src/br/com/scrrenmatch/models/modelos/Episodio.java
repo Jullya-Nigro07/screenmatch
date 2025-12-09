@@ -1,55 +1,40 @@
 package br.com.scrrenmatch.models.modelos;
 
-import br.com.scrrenmatch.models.calculos.Classificavel;
+public class Episodio {
 
-public class Episodio implements Classificavel {
-    private int numero;
-    private String nome;
-    private Serie serie;
-    private int totalVisuzalizacoes;
+    private int numeroEpisodio;
+    private String nomeEpisodio;
+    private Serie serieEpisodio;
 
-    public int getTotalVisuzalizacoes() {
-        return totalVisuzalizacoes;
+    public int getNumeroEpisodio() {
+        return numeroEpisodio;
     }
 
-    public void setTotalVisuzalizacoes(int totalVisuzalizacoes) {
-        this.totalVisuzalizacoes = totalVisuzalizacoes;
+    public String getNomeEpisodio() {
+        return nomeEpisodio;
     }
 
-    public int getNumero() {
-        return numero;
+    public Serie getSerieEpisodio() {
+        return serieEpisodio;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setNumeroEpisodio(int numeroEpisodio) {
+        this.numeroEpisodio = numeroEpisodio;
     }
 
-    public String getNome() {
-        return nome;
+    public void setNomeEpisodio(String nomeEpisodio) {
+        this.nomeEpisodio = nomeEpisodio;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setSerieEpisodio(Serie serieEpisodio) {
+        this.serieEpisodio = serieEpisodio;
     }
 
-    public Serie getSerie() {
-        return serie;
-    }
-
-    public void setSerie(Serie serie) {
-        this.serie = serie;
-    }
 
     @Override
-    public int getClassificacao(){
-        if (totalVisuzalizacoes > 100){
-            return 4;
-        }else{
-            return 2;
-        }
-    }
-    @Override
-    public String toString() {
-        return "";
+    public String toString () {
+        return "Nome do Episodio: " + nomeEpisodio +
+                "\nnº" + numeroEpisodio +
+                "\nSérie: " + serieEpisodio;
     }
 }

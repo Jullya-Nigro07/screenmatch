@@ -2,12 +2,14 @@ package br.com.scrrenmatch.models.modelos;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Titulo implements Comparable<Titulo>{
+public class Titulo implements Comparable<Titulo> {
+
     @SerializedName("Title")
     private String nome;
+
     @SerializedName("Year")
     private int anoDeLancamento;
-    private boolean incluidoNoPlano;
+
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
@@ -23,10 +25,6 @@ public class Titulo implements Comparable<Titulo>{
 
     public int getAnoDeLancamento() {
         return anoDeLancamento;
-    }
-
-    public boolean isIncluidoNoPlano() {
-        return incluidoNoPlano;
     }
 
     public int getDuracaoEmMinutos() {
@@ -45,16 +43,12 @@ public class Titulo implements Comparable<Titulo>{
         this.anoDeLancamento = anoDeLancamento;
     }
 
-    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
-        this.incluidoNoPlano = incluidoNoPlano;
-    }
-
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
     public void exibeFichaTecnica(){
-        System.out.println("Nome do filme: " + nome);
+        System.out.println("Nome: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
     }
 
@@ -68,7 +62,8 @@ public class Titulo implements Comparable<Titulo>{
     }
 
     public String toString() {
-        return "nome: '" + nome + '\'' + ", anoDeLancamento: " + anoDeLancamento;
+        return "Nome: '" + nome + '\'' + ", Ano de Lançamento: " + anoDeLancamento +
+                "\nDuração(min): " + duracaoEmMinutos;
     }
 
     @Override
